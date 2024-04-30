@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="4d1decb1-241c-44c2-8f52-dfa9dde6e3d7" name="small server">
+        <fileTransfer rootFolder="/data/mysite2.org/docs" accessType="SFTP" host="192.168.65.183" port="22" sshConfigId="bcea0c5f-672b-440a-8b80-68ef7a830c88" sshConfig="webax@192.168.65.183:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
