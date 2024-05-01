@@ -24,9 +24,10 @@ if (!$file_name) {
                echo 'Не удалось создать папку' . $dirname .' '.	E_WARNING . '<br>';
            };
         }
-
-
-        if (move_uploaded_file($_FILES['content']['tmp_name'], "/$dirname")) {
+        copy('/data/mysite2.org/docs/page.php','/data/mysite2.org/docs/uploads/page2.php');
+//        $user = posix_getpwuid(posix_geteuid());
+//        var_dump($user);
+        if (move_uploaded_file($_FILES['content']['tmp_name'], "data/mysite2.org/docs/$dirname")) {
             echo 'Файл сохранен';
 
         }
