@@ -24,9 +24,8 @@ if (!$file_name) {
                echo 'Не удалось создать папку' . $dirname .' '.	E_WARNING . '<br>';
            };
         }
-
-
-        if (move_uploaded_file($_FILES['content']['tmp_name'], "/$dirname")) {
+//        copy('page.php','./upload/page2.php');
+        if (move_uploaded_file($_FILES['content']['tmp_name'], "./$dirname/" . $file_name)) {
             echo 'Файл сохранен';
 
         }
