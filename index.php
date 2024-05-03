@@ -1,3 +1,6 @@
+<?php
+declare(strict_types=1);
+?>
 <!doctype html>
 <html lang="ru">
 <head>
@@ -7,13 +10,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <?php
-        include_once 'style.php';
+    include_once 'style.php';
     ?>
 </head>
 <body>
 <div class="form">
-    <?php setcookie('error', null);
-    ?>
     <form action="upload.php" method="post" enctype="multipart/form-data">
         <label> C каким именем сохранить файл на сервере
             <input type="text" name="file_name">
@@ -26,8 +27,14 @@
     </form>
     <div class="error">
         <?php
-            echo $_COOKIE['errorName'] . "<br>";
-            echo $_COOKIE['error'] . "<br>";
+        echo isset($_GET['errorName']) ? $_GET['errorName'] . "<br>" : '';
+        echo isset($_GET['error']) ? $_GET['error'] . "<br>" : '';
+        ?>
+    </div>
+    <div class="result">
+        <?php
+        echo $_GET['path'] ? 'Файл сохранен: ' . $_GET['path'] . '' : '';
+        echo $_GET['size'] ? ', размер: ' . $_GET['size'] . ' b' : '';
         ?>
     </div>
 
