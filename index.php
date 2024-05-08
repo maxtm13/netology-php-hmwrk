@@ -33,8 +33,8 @@ declare(strict_types=1);
     </div>
     <div class="result">
         <?php
-        echo $_GET['path'] ? 'Файл сохранен: ' . $_GET['path'] . '' : '';
-        echo $_GET['size'] ? ', размер: ' . $_GET['size'] . ' b' : '';
+        echo isset($_GET['path']) ? 'Файл сохранен: ' . $_GET['path'] . '' : '';
+        echo isset($_GET['size']) ? ', размер: ' . $_GET['size'] . ' b' : '';
         ?>
     </div>
 
